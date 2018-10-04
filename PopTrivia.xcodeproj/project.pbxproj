@@ -10,6 +10,9 @@
 		45FB337E2166A71D0000305E /* GenresVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FB337D2166A71D0000305E /* GenresVC.swift */; };
 		45FB33822166AE020000305E /* RoundButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FB33812166AE020000305E /* RoundButtonView.swift */; };
 		45FB33852166AEC80000305E /* QuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FB33842166AEC80000305E /* QuizVC.swift */; };
+		45FB33872166C6AF0000305E /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FB33862166C6AF0000305E /* QuestionController.swift */; };
+		45FB33892166C6CA0000305E /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FB33882166C6CA0000305E /* Topic.swift */; };
+		45FB338B2166C6E40000305E /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FB338A2166C6E40000305E /* Question.swift */; };
 		45FEA87E216693000000C2DD /* TopicsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FEA87D216693000000C2DD /* TopicsTableVC.swift */; };
 		45FEA880216696920000C2DD /* Colors+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FEA87F216696920000C2DD /* Colors+Extension.swift */; };
 		C317D06221668D8500A7B5B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317D06121668D8500A7B5B2 /* AppDelegate.swift */; };
@@ -22,6 +25,9 @@
 		45FB337D2166A71D0000305E /* GenresVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresVC.swift; sourceTree = "<group>"; };
 		45FB33812166AE020000305E /* RoundButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButtonView.swift; sourceTree = "<group>"; };
 		45FB33842166AEC80000305E /* QuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizVC.swift; sourceTree = "<group>"; };
+		45FB33862166C6AF0000305E /* QuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
+		45FB33882166C6CA0000305E /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
+		45FB338A2166C6E40000305E /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		45FEA87D216693000000C2DD /* TopicsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsTableVC.swift; sourceTree = "<group>"; };
 		45FEA87F216696920000C2DD /* Colors+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+Extension.swift"; sourceTree = "<group>"; };
 		C317D05E21668D8500A7B5B2 /* PopTrivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopTrivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +75,23 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		45FB338C2166C6F30000305E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				45FB33882166C6CA0000305E /* Topic.swift */,
+				45FB338A2166C6E40000305E /* Question.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		45FB338D2166C6FC0000305E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				45FB33862166C6AF0000305E /* QuestionController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		C317D05521668D8400A7B5B2 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +119,8 @@
 				45FB337F2166A7290000305E /* ViewControllers */,
 				45FB33802166A7420000305E /* Extensions */,
 				45FB33832166AE070000305E /* Views */,
+				45FB338D2166C6FC0000305E /* Controllers */,
+				45FB338C2166C6F30000305E /* Models */,
 			);
 			path = PopTrivia;
 			sourceTree = "<group>";
@@ -171,10 +196,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45FB33872166C6AF0000305E /* QuestionController.swift in Sources */,
 				45FEA87E216693000000C2DD /* TopicsTableVC.swift in Sources */,
 				45FB33852166AEC80000305E /* QuizVC.swift in Sources */,
+				45FB338B2166C6E40000305E /* Question.swift in Sources */,
 				C317D06221668D8500A7B5B2 /* AppDelegate.swift in Sources */,
 				45FB33822166AE020000305E /* RoundButtonView.swift in Sources */,
+				45FB33892166C6CA0000305E /* Topic.swift in Sources */,
 				45FB337E2166A71D0000305E /* GenresVC.swift in Sources */,
 				45FEA880216696920000C2DD /* Colors+Extension.swift in Sources */,
 			);
