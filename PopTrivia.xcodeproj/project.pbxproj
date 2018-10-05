@@ -13,6 +13,7 @@
 		45FB33872166C6AF0000305E /* QuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FB33862166C6AF0000305E /* QuestionController.swift */; };
 		45FB33892166C6CA0000305E /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FB33882166C6CA0000305E /* Topic.swift */; };
 		45FB338B2166C6E40000305E /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FB338A2166C6E40000305E /* Question.swift */; };
+		45FB33912166D7F10000305E /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FB33902166D7F10000305E /* AlertView.swift */; };
 		45FEA87E216693000000C2DD /* TopicsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FEA87D216693000000C2DD /* TopicsTableVC.swift */; };
 		45FEA880216696920000C2DD /* Colors+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FEA87F216696920000C2DD /* Colors+Extension.swift */; };
 		C317D06221668D8500A7B5B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C317D06121668D8500A7B5B2 /* AppDelegate.swift */; };
@@ -28,6 +29,7 @@
 		45FB33862166C6AF0000305E /* QuestionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionController.swift; sourceTree = "<group>"; };
 		45FB33882166C6CA0000305E /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		45FB338A2166C6E40000305E /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		45FB33902166D7F10000305E /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		45FEA87D216693000000C2DD /* TopicsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsTableVC.swift; sourceTree = "<group>"; };
 		45FEA87F216696920000C2DD /* Colors+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+Extension.swift"; sourceTree = "<group>"; };
 		C317D05E21668D8500A7B5B2 /* PopTrivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopTrivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				45FB33812166AE020000305E /* RoundButtonView.swift */,
+				45FB33902166D7F10000305E /* AlertView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				45FB33852166AEC80000305E /* QuizVC.swift in Sources */,
 				45FB338B2166C6E40000305E /* Question.swift in Sources */,
 				C317D06221668D8500A7B5B2 /* AppDelegate.swift in Sources */,
+				45FB33912166D7F10000305E /* AlertView.swift in Sources */,
 				45FB33822166AE020000305E /* RoundButtonView.swift in Sources */,
 				45FB33892166C6CA0000305E /* Topic.swift in Sources */,
 				45FB337E2166A71D0000305E /* GenresVC.swift in Sources */,

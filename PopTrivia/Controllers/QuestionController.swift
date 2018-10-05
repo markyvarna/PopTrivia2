@@ -75,6 +75,74 @@ extension QuestionController{
         let movieTopics: [Topic] = [topicMarvel,topicDC,topicHarryPotter]
         genreDict["Movies"] = movieTopics
         
+        //Topic Female Celebs
+        let fc1 = Question(questionText: "Harry Styles and Justin Bieber can both juggle.", correctAnswer: true)
+        let fc2 = Question(questionText: "As a child, Johnny Depp was allergic to chocolate.", correctAnswer: true)
+        let fc3 = Question(questionText: "Chuck Norris' first name is actually Carlos.", correctAnswer: true)
+        let fc4 = Question(questionText: "Enrique Iglesias thinks his penis is too small.", correctAnswer: false)
+        let fc5 = Question(questionText: "Daniel Craig was the first actor to play James Bond, who was born after the series began in 1962.", correctAnswer: true)
+        let fc6 = Question(questionText: "Jay-Z is Apple Martin's godfather.", correctAnswer: false)
+        let fc7 = Question(questionText: "Gary Oldman is the brother of mouthy Mo in Eastenders.", correctAnswer: false)
+        let fc8 = Question(questionText: "Frank Oz was the voice for Yoda, Miss Piggy and Cookie Monster.", correctAnswer: true)
+        let fc9 = Question(questionText: "Donald Trump owns and operates around 18 golf courses around the world.", correctAnswer: true)
+        let fc10 = Question(questionText: "Ronaldo is a Football player.", correctAnswer: false)
+        
+        let fcQuestions: [Question] = [fc1, fc2, fc3, fc4, fc5, fc6, fc7, fc8, fc9, fc10]
+        let fcTopic = Topic(name: "Female Celebrities", questions: fcQuestions)
+        
+        //Topic Male Celebs
+        let mc1 = Question(questionText: "Lady Gaga wrote Just Dance and Born This Way in just 10 minutes.", correctAnswer: true)
+        let mc2 = Question(questionText: "Nicki Minaj is acrophobic, meaning she is afraid of heights.", correctAnswer: true)
+        let mc3 = Question(questionText: "Miley Cyrus and Liam Hemsworth went to Starbucks on their first date", correctAnswer: false)
+        let mc4 = Question(questionText: "P!nk's real name is Alecia Beth Moore.", correctAnswer: true)
+        let mc5 = Question(questionText: "Before he hooked up with Britney Spears, Justin Timberlake dated Fergie from the Black Eyed Peas. ", correctAnswer: false)
+        let mc6 = Question(questionText: "Angelina Jolie once wanted to be a funeral director.", correctAnswer: false)
+        let mc7 = Question(questionText: "In March 2006, Beyoncé accepted a star on the Hollywood Walk of Fame.", correctAnswer: true)
+        let mc8 = Question(questionText: "Kate Winslet's great-grandmother was rescued from The Titanic. ", correctAnswer: false)
+        let mc9 = Question(questionText: "Nicki Minaj's full name is Onika Tanya Maraj.", correctAnswer: true)
+        let mc10 = Question(questionText: "Scarlett Johansson won a poetry competition when she was 11.", correctAnswer: false)
+        
+        let mcQuestions: [Question] = [mc1, mc2, mc3, mc4, mc5, mc6, mc7, mc8, mc9, mc10]
+        let mcTopic = Topic(name: "Male Celebrities", questions: mcQuestions)
+        
+        //Genre Celebrities
+        let celebTopics = [fcTopic, mcTopic]
+        genreDict["Celebs"] = celebTopics
+        
+        //Topic - NFL
+        
+        let n1 = Question(questionText: "let nQuestions: [Question] = [n1]", correctAnswer: true)
+        let n2 = Question(questionText: "The NFL was founded in 1834 by Bill NFL.", correctAnswer: false)
+        let n3 = Question(questionText: "The NFL was canceled in 2018 due to players taking knees.", correctAnswer: false)
+        let n4 = Question(questionText: "let nQuestions: [Question] = [n1]", correctAnswer: true)
+        let n5 = Question(questionText: "let nQuestions: [Question] = [n1]", correctAnswer: true)
+        let n6 = Question(questionText: "The Arizona Cardinals had the longest postseason victory drought in NFL history (1947 to 1998).", correctAnswer: true)
+        let n7 = Question(questionText: "Bruce Wayne holds the record for most free throws thrown for the Colts. The record being 123", correctAnswer: false)
+        let n8 = Question(questionText: "There have been 14 different rushing champions in the past 17 years. There were 14 different champions in the 27 years before that.", correctAnswer: true)
+        let n9 = Question(questionText: "Ed Sabol was the oldest Hall of Fame inductee. At 94 years old, he was 60 years older than the youngest, Gale Sayers.", correctAnswer: true)
+        let n10 = Question(questionText: "The Dallas Bears have the most retired numbers of any NFL team with 13.", correctAnswer: false)
+        
+        let nQuestions: [Question] = [n1,n2,n3,n4,n5,n6,n7,n8,n9,n10]
+        let nTopic = Topic(name: "NFL", questions: nQuestions)
+        
+        //Topic - College Football
+        let c1 = Question(questionText: "USC is the best team.", correctAnswer: true)
+        let c2 = Question(questionText: "The Rose Bowl became the first college football bowl game in 1902, which is why the game is referred to as \"the grandaddy of them all.\" The first Rose Bowl was played between Michigan and Stanford.", correctAnswer: true)
+        let c3 = Question(questionText: "The University of Oklahoma has the longest winning streak in college football, emerging victorious from 47 games in a row from 1953 to 1957.", correctAnswer: true)
+        let c4 = Question(questionText: "In 1916, Georgia Tech (under the guidance of coach John Heisman) beat Cumberland 222 to 0 in what has become \"the most lopsided game in college football history.\"", correctAnswer: true)
+        let c5 = Question(questionText: "The NCAA started officially tracking college football statistics in 1967.", correctAnswer: false)
+        let c6 = Question(questionText: "Drew Brees holds the record for the highest number of attempted passes in a college football game. He threw the ball 83 times as a Purdue Boilermaker for a win over Wisconsin in 1998.", correctAnswer: true)
+        let c7 = Question(questionText: "In the 2018 season, Florida State set a new record for the highest number of dabs done in a season: 723.", correctAnswer: false)
+        let c8 = Question(questionText: "Auburn University will open the 2015 season with its newly-installed largest scoreboard in college football. The cost for such a behemoth scoreboard? $13.9 million.", correctAnswer: true)
+        let c9 = Question(questionText: "Johnny Manziel became the fiftieth freshman to win the Heisman Trophy in 2012.", correctAnswer: false)
+        let c10 = Question(questionText: "Three Heisman Trophy winners played a professional major league sport other than football: Bo Jackson (baseball), Vic Janowicz (baseball) and Charlie Ward (basketball).", correctAnswer: true)
+        
+        let cQuestions: [Question] = [c1,c2,c3,c4,c5,c6,c7,c8,c9,c10]
+        let cTopic = Topic(name: "College Football", questions: cQuestions)
+        
+        //Genre - Sports
+        let sportsTopics = [nTopic, cTopic]
+        genreDict["Sports"] = sportsTopics
     }
     
 }

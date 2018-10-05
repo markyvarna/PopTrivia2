@@ -125,7 +125,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="9Mx-bZ-DyP" kind="show" id="nGE-Jt-ncE"/>
+                                    <segue destination="9Mx-bZ-DyP" kind="show" identifier="goToQuiz" id="nGE-Jt-ncE"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -239,10 +239,41 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZnM-sY-PES" customClass="AlertView" customModule="PopTrivia" customModuleProvider="target">
+                                <rect key="frame" x="127.5" y="273.5" width="120" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dM-Vj-4Ju">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="qq6-TQ-ui7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                        <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="4dM-Vj-4Ju" firstAttribute="top" secondItem="ZnM-sY-PES" secondAttribute="top" id="50Z-y0-E3j"/>
+                                    <constraint firstAttribute="width" constant="120" id="Kbp-c0-1sJ"/>
+                                    <constraint firstItem="4dM-Vj-4Ju" firstAttribute="leading" secondItem="ZnM-sY-PES" secondAttribute="leading" id="Tv7-a9-Xxa"/>
+                                    <constraint firstAttribute="height" constant="120" id="l9A-Nc-IsE"/>
+                                    <constraint firstAttribute="trailing" secondItem="4dM-Vj-4Ju" secondAttribute="trailing" id="oWg-RV-CkP"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="correct" translatesAutoresizingMaskIntoConstraints="NO" id="dXO-Ko-Op8">
+                                <rect key="frame" x="162.5" y="308.5" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="uNL-6t-cIU"/>
+                                    <constraint firstAttribute="height" constant="50" id="zNP-au-fi3"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.098039215690000001" green="0.69803921570000005" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="ZnM-sY-PES" firstAttribute="centerX" secondItem="xYk-8c-NMa" secondAttribute="centerX" id="026-wX-RFJ"/>
                             <constraint firstItem="GT8-If-Ddc" firstAttribute="top" secondItem="CdI-16-hdp" secondAttribute="top" id="0Mh-7n-yNT"/>
+                            <constraint firstItem="ZnM-sY-PES" firstAttribute="centerY" secondItem="xYk-8c-NMa" secondAttribute="centerY" id="1cR-QB-z7M"/>
                             <constraint firstItem="23c-4M-YPy" firstAttribute="centerX" secondItem="xYk-8c-NMa" secondAttribute="centerX" id="3Np-dk-xaY"/>
                             <constraint firstItem="XlC-dl-0as" firstAttribute="top" secondItem="CdI-16-hdp" secondAttribute="top" id="9jB-0S-r1a"/>
                             <constraint firstItem="XlC-dl-0as" firstAttribute="leading" secondItem="CdI-16-hdp" secondAttribute="leading" id="DGZ-qC-kPt"/>
@@ -259,6 +290,8 @@
                             <constraint firstItem="tz8-ei-NCs" firstAttribute="leading" secondItem="CdI-16-hdp" secondAttribute="leading" constant="16" id="XqN-Y8-90e"/>
                             <constraint firstItem="23c-4M-YPy" firstAttribute="width" secondItem="xYk-8c-NMa" secondAttribute="width" multiplier="0.7" id="ZG2-sw-xYb"/>
                             <constraint firstItem="XlC-dl-0as" firstAttribute="trailing" secondItem="CdI-16-hdp" secondAttribute="trailing" id="agf-nB-qQo"/>
+                            <constraint firstItem="dXO-Ko-Op8" firstAttribute="centerX" secondItem="xYk-8c-NMa" secondAttribute="centerX" id="nFS-ze-17d"/>
+                            <constraint firstItem="dXO-Ko-Op8" firstAttribute="centerY" secondItem="xYk-8c-NMa" secondAttribute="centerY" id="nyB-h6-EYl"/>
                             <constraint firstItem="Id8-ZD-Hz1" firstAttribute="centerX" secondItem="xYk-8c-NMa" secondAttribute="centerX" id="pqj-5Q-zwU"/>
                             <constraint firstItem="GT8-If-Ddc" firstAttribute="top" secondItem="CdI-16-hdp" secondAttribute="top" id="u5V-2O-TIt"/>
                             <constraint firstItem="CdI-16-hdp" firstAttribute="bottom" secondItem="Id8-ZD-Hz1" secondAttribute="bottom" constant="50" id="xEl-5W-5eu"/>
@@ -267,10 +300,13 @@
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="alertImageView" destination="dXO-Ko-Op8" id="zf0-Yu-RbR"/>
+                        <outlet property="alertLabel" destination="4dM-Vj-4Ju" id="2TF-9S-Evz"/>
+                        <outlet property="alertView" destination="ZnM-sY-PES" id="iX6-Vj-srn"/>
                         <outlet property="falseButton" destination="os7-q3-Eav" id="hqU-ve-EJp"/>
                         <outlet property="lifeLabel" destination="tz8-ei-NCs" id="eZ5-0F-VE8"/>
                         <outlet property="progressBar" destination="GT8-If-Ddc" id="hED-E3-2vA"/>
-                        <outlet property="progressBarBackGroundView" destination="XlC-dl-0as" id="nSw-wU-kyA"/>
+                        <outlet property="progressBarBackGroundView" destination="4dM-Vj-4Ju" id="wBp-X9-0s7"/>
                         <outlet property="questionCountLabel" destination="gHh-BK-Tcq" id="OJ5-Lg-pzx"/>
                         <outlet property="questionTF" destination="NDc-im-aTW" id="Y3f-PT-jMG"/>
                         <outlet property="startButton" destination="23c-4M-YPy" id="DrD-wk-SOq"/>
@@ -302,6 +338,7 @@
     </scenes>
     <resources>
         <image name="celebs" width="512" height="512"/>
+        <image name="correct" width="512" height="512"/>
         <image name="movies" width="512" height="512"/>
         <image name="sports" width="512" height="512"/>
         <image name="world" width="512" height="512"/>

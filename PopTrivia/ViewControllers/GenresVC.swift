@@ -13,7 +13,7 @@ class GenresVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
+       QuestionController.shared.createQuiz()
     }
     
     @IBAction func moviesBP(_ sender: Any) {
@@ -38,16 +38,16 @@ class GenresVC: UIViewController {
         
         if segue.identifier == "goToMovies" {
             let destinationvc = segue.destination as? TopicsTableVC
-            destinationvc?.topic = "Movie"
+            destinationvc?.genre = "Movies"
         } else if segue.identifier == "goToSports" {
             let destinationvc = segue.destination as? TopicsTableVC
-            destinationvc?.topic = "Sports"
+            destinationvc?.genre = "Sports"
         } else if segue.identifier == "goToCelebs" {
             let destinationvc = segue.destination as? TopicsTableVC
-            destinationvc?.topic = "Celebs"
+            destinationvc?.genre = "Celebs"
         } else if segue.identifier == "goToWorld" {
             let destinationvc = segue.destination as? TopicsTableVC
-            destinationvc?.topic = "World"
+            destinationvc?.genre = "World"
         }
         
     }

@@ -11,61 +11,59 @@ import UIKit
 class TopicsTableVC: UITableViewController {
     
     //MOCK DATA
-    var movieArray = ["Marvel", "DC", "Lucas Films"]
-    var sportsArray = ["Football", "Soccer", "Golf"]
-    var celebsArray = ["Donald Trump", "Tom Cruise", "Emma Stone"]
-    var worldArray = ["Africa", "South America", "North America", "Europe"]
-    var topic: String?
-
-    var selectedArray: [String] = []
+ 
+    var genre: String?
+    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        guard let topic = topic else {return}
-        if topic == "Movie" {
-            loopy(array: movieArray)
-        } else if topic == "Sports" {
-            loopy(array: sportsArray)
-        } else if topic == "World" {
-            loopy(array: worldArray)
-        } else if topic == "Celebs"{
-            loopy(array: celebsArray)
-        }
+        print(genre!)
+        print(QuestionController.shared.genreDict[genre!])
     
     }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return selectedArray.count
+        guard let genre = genre else {return 0}
+        if let topic = QuestionController.shared.genreDict[genre] {
+             return topic.count
+        } else {
+            return 0
+        }
+       
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "topicCell", for: indexPath)
 
-        cell.textLabel?.text = selectedArray[indexPath.row]
+        guard let genre = genre else {return UITableViewCell()}
+        if let topic = QuestionController.shared.genreDict[genre] {
+            cell.textLabel?.text = topic[indexPath.row].name
+        }
         
 
         return cell
     }
-    
+   
+//     MARK: - Navigation
 
-    func loopy(array: [String]) {
-        for i in array {
-            selectedArray.append(i)
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToQuiz" {
+            let destinationvc = segue.destination as? QuizVC
+            guard let indexPath = tableView.indexPathForSelectedRow?.row,
+                let genre = genre else {return}
+            if  let topic = QuestionController.shared.genreDict[genre] {
+                destinationvc?.questions = topic[indexPath].questions
+                print("✅ Questions sent!")
+            }
+            
         }
     }
-   
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-//    }
     
 
 }
