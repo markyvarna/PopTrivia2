@@ -111,11 +111,11 @@ extension QuestionController{
         
         //Topic - NFL
         
-        let n1 = Question(questionText: "let nQuestions: [Question] = [n1]", correctAnswer: true)
+        let n1 = Question(questionText: "The NFL IS A GAME", correctAnswer: false)
         let n2 = Question(questionText: "The NFL was founded in 1834 by Bill NFL.", correctAnswer: false)
         let n3 = Question(questionText: "The NFL was canceled in 2018 due to players taking knees.", correctAnswer: false)
-        let n4 = Question(questionText: "let nQuestions: [Question] = [n1]", correctAnswer: true)
-        let n5 = Question(questionText: "let nQuestions: [Question] = [n1]", correctAnswer: true)
+        let n4 = Question(questionText: "The NFL was founded in 2002", correctAnswer: false)
+        let n5 = Question(questionText: "I own the NFL", correctAnswer: false)
         let n6 = Question(questionText: "The Arizona Cardinals had the longest postseason victory drought in NFL history (1947 to 1998).", correctAnswer: true)
         let n7 = Question(questionText: "Bruce Wayne holds the record for most free throws thrown for the Colts. The record being 123", correctAnswer: false)
         let n8 = Question(questionText: "There have been 14 different rushing champions in the past 17 years. There were 14 different champions in the 27 years before that.", correctAnswer: true)
@@ -140,9 +140,60 @@ extension QuestionController{
         let cQuestions: [Question] = [c1,c2,c3,c4,c5,c6,c7,c8,c9,c10]
         let cTopic = Topic(name: "College Football", questions: cQuestions)
         
+        //Topic Soccer
+        let s1 = Question(questionText: "Football was created about 3000 years ago.", correctAnswer: false)
+        let s2 = Question(questionText: "Soccer is the most popular game in the world. In many countries it is known as football", correctAnswer: true)
+        let s3 = Question(questionText: "In England, soccer was formed when several clubs formed the Football Association about 150 years ago.", correctAnswer: true)
+        let s4 = Question(questionText: "Women started playing soccer around the same time as men did in England. However, originally men were the main players in the game. Women's soccer started to become extremely popular in the 1950s.", correctAnswer: false)
+        let s5 = Question(questionText: "In China, the first soccer balls were made from sewn clothing that was filled with rubble. In Europe during the Middle Ages, soccer balls were made from inflated pig bladders.", correctAnswer: true)
+        let s6 = Question(questionText: "Today most of the balls are made from layers of synthetic leather while the bladders inside the ball are made from latex or butyl.", correctAnswer: true)
+        let s7 = Question(questionText: "Soccer is often mispronounced. Lesser beings have been known to pronounce it like the great sport Football", correctAnswer: true)
+        let s8 = Question(questionText: "Soccer is played with the hands.", correctAnswer: false)
+        let s9 = Question(questionText: "Soccer is played on a grassy field called a pitch. The field is rectangular and must be between 50 and 60 yards long and 50 to 100 yards wide.", correctAnswer: false)
+        let s10 = Question(questionText: "An international soccer game is 120 minutes long. The 120 minutes is divided in two 45 minute halves.", correctAnswer: false)
+        let sQuestions:[Question] = [s1,s2,s3,s4,s5,s6,s7,s8,s9,s10]
+        let sTopic = Topic(name: "Soccer", questions: sQuestions)
+        
         //Genre - Sports
-        let sportsTopics = [nTopic, cTopic]
+        let sportsTopics = [nTopic, cTopic, sTopic]
+        
+        
+        
         genreDict["Sports"] = sportsTopics
+        
+        //Topic - Animals
+        let a1 = Question(questionText: "The heart of a shrimp is located in its head.", correctAnswer: true)
+        let a2 = Question(questionText: "A snail can sleep for twenty years.", correctAnswer: false)
+        let a3 = Question(questionText: "The fingerprints of a koala are so indistinguishable from humans that they have on occasion been confused at a crime scene.", correctAnswer: true)
+        let a4 = Question(questionText: "Slugs have four noses.", correctAnswer: true)
+        let a5 = Question(questionText: "Elephants are the only animal that can't jump.", correctAnswer: true)
+        let a6 = Question(questionText: "A rhinoceros' horn is made of hair.", correctAnswer: true)
+        let a7 = Question(questionText: "It is possible to hypnotize a frog by placing it on its back and gently stroking its genitalia.", correctAnswer: false)
+        let a8 = Question(questionText: "It takes a sloth two weeks to digest its food.", correctAnswer: true)
+        let a9 = Question(questionText: "Nearly three percent of the ice in Antarctic glaciers is penguin urine.", correctAnswer: true)
+        let a10 = Question(questionText: "A cow gives nearly 2,000,00,000 glasses of milk in a lifetime.", correctAnswer: false)
+        
+        let aQuestions: [Question] = [a1,a2,a3,a4,a5,a6,a7,a8,a9,a10]
+        let aTopic = Topic(name: "Animals", questions: aQuestions)
+        
+        //Topic - Countries
+        let b1 = Question(questionText: "the Hawaiian alphabet has 13 letters", correctAnswer: true)
+        let b2 = Question(questionText: "'Topolino' is the name for Mickey Mouse Italy", correctAnswer: true)
+        let b3 = Question(questionText: "Sydney is Australia's windiest city", correctAnswer: false)
+        let b4 = Question(questionText: "Switzerland eats the most chocolate equating to 10 kilos per person per year", correctAnswer: true)
+        let b5 = Question(questionText: "the only continent with no active volcanoes is Afganistan", correctAnswer: false)
+        let b6 = Question(questionText: "the longest street in the world is Yonge street in Toronto Canada measuring 1,896 km (1,178 miles)", correctAnswer: true)
+        let b7 = Question(questionText: "the croissant was invented in Austria", correctAnswer: true)
+        let b8 = Question(questionText: "In eastern Africa you can buy beer brewed from sweat", correctAnswer: false)
+        let b9 = Question(questionText: "African Grey Parrots have vocabularies of over 200 words", correctAnswer: true)
+        let b10 = Question(questionText: "Australia was originally called Big Island", correctAnswer: false)
+        
+        let bQuestions:[Question] = [b1,b2,b3,b4,b5,b6,b7,b8,b9,b10]
+        let bTopic = Topic(name: "Countries", questions: bQuestions)
+        
+        //Genre - World
+        let worldTopics = [aTopic,bTopic]
+        genreDict["World"] = worldTopics
     }
     
 }
